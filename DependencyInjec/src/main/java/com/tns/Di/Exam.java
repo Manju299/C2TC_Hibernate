@@ -8,8 +8,10 @@ public class Exam {
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 		ApplicationContext context  = new ClassPathXmlApplicationContext("beans.xml");
-		Student s1 =context.getBean("s1",Student.class);
-		s1.displayStudent();
+		
+		Student s1 =(Student)context.getBean("s1");
+		Student s2 =(Student)context.getBean("s2");
+		System.out.println(s1 +"\n "+ s2);
 		
 
 	}
